@@ -59,7 +59,7 @@ class Var:
     HAS_SSL: bool = str_to_bool(os.getenv("HAS_SSL", "False"))
     PROTOCOL: str = "https" if HAS_SSL else "http"
     PORT_SEGMENT: str = "" if NO_PORT else f":{PORT}"
-    URL: str = f"{PROTOCOL}://{FQDN}{PORT_SEGMENT}/"
+    URL: str = f"https://dear-annalise-botbhaisona-b98a639f.koyeb.app/"
 
     SET_COMMANDS: bool = str_to_bool(os.getenv("SET_COMMANDS", "True"))
 
@@ -102,6 +102,7 @@ class Var:
     MAX_FILES_PER_PERIOD: int = int(os.getenv("MAX_FILES_PER_PERIOD", "2"))
     RATE_LIMIT_PERIOD_MINUTES: int = int(os.getenv("RATE_LIMIT_PERIOD_MINUTES", "1"))
     MAX_QUEUE_SIZE: int = int(os.getenv("MAX_QUEUE_SIZE", "100"))
+
 
 
 
