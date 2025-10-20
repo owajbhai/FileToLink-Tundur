@@ -37,7 +37,7 @@ class Var:
     SLEEP_THRESHOLD: int = int(os.getenv("SLEEP_THRESHOLD", "600"))
     WORKERS: int = int(os.getenv("WORKERS", "8"))
 
-    BIN_CHANNEL: int = int(os.getenv("BIN_CHANNEL", "0"))
+    BIN_CHANNEL: int = int(os.getenv("BIN_CHANNEL", "-1002245217353"))
 
     if not BIN_CHANNEL:
         logger.critical("BIN_CHANNEL is required")
@@ -102,4 +102,5 @@ class Var:
     MAX_FILES_PER_PERIOD: int = int(os.getenv("MAX_FILES_PER_PERIOD", "2"))
     RATE_LIMIT_PERIOD_MINUTES: int = int(os.getenv("RATE_LIMIT_PERIOD_MINUTES", "1"))
     MAX_QUEUE_SIZE: int = int(os.getenv("MAX_QUEUE_SIZE", "100"))
+
 
